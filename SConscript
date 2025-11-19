@@ -110,6 +110,7 @@ if GetDepend(['BSP_USING_DSI']):
 
 if GetDepend(['BSP_USING_SRAM']):
     src += [os.path.join(src_path, 'stm32h5xx_hal_sram.c')]
+    src += [os.path.join(src_path, 'stm32h5xx_ll_fmc.c')]
     
 group = DefineGroup('STM32H5-HAL', src, depend = ['PKG_USING_STM32H5_HAL_DRIVER'], CPPPATH = path, CPPDEFINES = CPPDEFINES)
 
